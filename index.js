@@ -14,9 +14,6 @@ module.exports = function (cachePaths) {
     var cacheValue = cacheValues(slasher(pathname));
     
     onHeaders(res, function () {
-      
-      // Default value
-      res.setHeader('Cache-Control', 'public, max-age=300');
       setCacheHeader(res, cacheValue);
     });
     
